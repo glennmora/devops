@@ -13,7 +13,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //this will run dockerbuild with the jenkins build number
-		sh 'docker build -t rangel9697/jenkinstest:$BUILD_NUMBER ./pushdockerimage/'
+		sh 'docker build -t rangel9697/jenkinstest:$BUILD_NUMBER ./'
             }
         }
         stage('Docker Login') {
